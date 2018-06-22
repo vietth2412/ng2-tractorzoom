@@ -1,0 +1,45 @@
+﻿#loading {
+    background: url('/assets/global/img/loading.gif') no-repeat;
+    height: 10px;
+    margin-left: 50%;
+}
+
+td.ng-binding:first-letter {
+    text-transform: uppercase;
+}
+
+th {
+    white-space: nowrap;
+}
+
+.required {
+    color: red;
+}
+
+.list-drive .radio-inline.radio-sm {
+    margin-left: 0 !important;
+    padding-left: 15px;
+    float: left;
+    width: 50%;
+}
+
+.list-auctions-upcoming .item-footer .btn {
+    margin-bottom: 5px !important;
+}
+
+.list-auctions-upcoming .item .item-footer .btn, .list-auctions-upcoming .item .item-footer .btn:not(.btn-sm):not(.btn-lg) {
+    margin-bottom: 5px !important;
+}
+
+.statistic-box {
+    transition: background-color 0.5s ease;
+}
+
+    .statistic-box:hover {
+        background: #bdc3c7 !important;
+        cursor: pointer;
+    }
+
+.statistic-box-active {
+    background: #bdc3c7 !important;
+}

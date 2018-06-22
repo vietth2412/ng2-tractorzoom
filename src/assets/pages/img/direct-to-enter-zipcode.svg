@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="212" height="48" viewBox="0 0 212 48">
+    <defs>
+        <filter id="a" width="106.7%" height="112.3%" x="-3.4%" y="-5.2%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0.0117647059 0 0 0 0 0.0666666667 0 0 0 0 0.149019608 0 0 0 0.2 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd" filter="url(#a)" transform="translate(-147 -170)">
+        <text fill="#FFF" font-family="Roboto-Bold, Roboto" font-size="13" font-weight="bold" transform="translate(154 176)">
+            <tspan x="60" y="14">Enter Zip Code to </tspan> <tspan x="60" y="31">Find Auctions Near You</tspan>
+        </text>
+        <g stroke="#EFF1F4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M160.004 178c-.128 9.705 2.99 15.88 9.354 18.522 6.364 2.642 16.578 1.742 30.642-2.698"/>
+            <path d="M155.357 184.158l4.15-7.126 5.831 6.426"/>
+        </g>
+    </g>
+</svg>

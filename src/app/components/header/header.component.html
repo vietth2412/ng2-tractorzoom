@@ -1,0 +1,156 @@
+<!-- 
+<div class="modal-welcome" ng-if="!$root.hidePopup && popupTemplate && $state.current.name !== 'giveaway'">
+  <div class="modal-welcome-container">
+      <div class="modal-welcome-inner text-center" compile="popupTemplate"></div>
+  </div>
+</div> -->
+
+<!-- <div class="block-box" style="z-index: 999999" ng-if="$root.userNotLogin">
+  <div class="wrapper-box" outside-click="$root.userNotLogin = false; $root.isSending = false; clearLotFavorite()">
+      <div class="close-button" ng-click="$root.userNotLogin = false; $root.isSending = false">
+          <i class="ion-close-round"></i>
+      </div>
+      <div class="text-center icon-lg">
+          <i class="fa fa-lock"></i>
+      </div>
+      <div class="notification-normal text-center">
+          This feature can only be
+          <br> used by registered users.
+      </div>
+      <div class="group-btn">
+          <button class="btn btn-block btn-primary" ng-click="$root.userNotLogin = false; $root.isSending = false" ui-sref="core.signup">
+              Create a new account </button>
+          <button class="btn btn-block btn-primary" ng-click="$root.userNotLogin = false; $root.isSending = false" ui-sref="core.login">
+              Sign in </button>
+          <button class="btn btn-block btn-facebook" ng-click="$root.userNotLogin = false; $root.isSending = false; loginWithFB()">
+              <span>
+                  <i class="fa fa-facebook" aria-hidden="true"></i> Sign in with Facebook</span>
+          </button>
+      </div>
+      <div class="footer-form" ng-click="$root.userNotLogin = false; $root.isSending = false; clearLotFavorite()">
+          Skip and do not use this feature
+      </div>
+  </div>
+</div> -->
+<div class="header-nav">
+  <div class="header-nav__container">
+      <div class="header-nav__logo">
+          <a href="#" target="_blank" class="header-nav__link">
+              <i class="fa fa-bars" aria-hidden="true" ng-click="toggleMenu()"></i>
+              <img src="assets/pages/img/color-black-text@3x.png" height="40" width="172" ui-sref="homepage" />
+          </a>
+      </div>
+      <div class="header-nav__menu">
+          <ul class="header-nav__list header-nav__list-main">
+              <li class="header-nav__item header-nav__item--user-mobile" ng-if="$root.user">
+                  <!-- <a class="header-nav__link">{{$root.user.first_name}} {{$root.user.last_name}}
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </a> -->
+                  <ul class="header-nav__sub-list">
+                      <li class="header-nav__sub-item">
+                          <a class="header-nav__sub-link" ng-click="accessMyAcount()">Settings</a>
+                      </li>
+                      <li class="header-nav__sub-item">
+                          <a class="header-nav__sub-link" ng-click="accessFavorite()">Favorites</a>
+                      </li>
+                      <li role="separator" class="divider"></li>
+                      <li class="header-nav__sub-item">
+                          <a class="header-nav__sub-link" ng-if="$root.user" ng-click="logout()">Log Out</a>
+                      </li>
+                  </ul>
+              </li>
+              <li class="header-nav__item">
+                  <a href="#" target="_blank" class="header-nav__link">Views Auctions
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </a>
+                  <ul class="header-nav__sub-list">
+                      <li class="header-nav__sub-item">
+                          <a ui-sref="auctionsByState" class="header-nav__sub-link">By State</a>
+                      </li>
+                      <li class="header-nav__sub-item">
+                          <a ui-sref="auctionsByAuctioneer" class="header-nav__sub-link">By Company</a>
+                      </li>
+                  </ul>
+              </li>
+              <li class="header-nav__item">
+                  <a href="#" target="_blank" class="header-nav__link">For Auctioneers
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </a>
+                  <ul class="header-nav__sub-list">
+                      <li class="header-nav__sub-item">
+                          <a ui-sref="forAuctioneer">More Information</a>
+                      </li>
+                      <li role="separator" class="divider"></li>
+                      <li class="header-nav__sub-item">
+                          <a href="https://auctioneer.tractorzoom.com/#/core/login" target="_blank">Log In</a>
+                      </li>
+                      <li class="header-nav__sub-item">
+                          <a href="https://auctioneer.tractorzoom.com/#/core/signup" target="_blank">Sign Up</a>
+                      </li>
+                  </ul>
+              </li>
+              <li class="header-nav__item">
+                  <a ui-sref="aboutUs" class="header-nav__link">About</a>
+              </li>
+              <li class="header-nav__item">
+                  <a ui-sref="contactUs" class="header-nav__link">Contact</a>
+              </li>
+              <li class="header-nav__item">
+                  <a href="https://blog.tractorzoom.com/" target="_blank" class="header-nav__link">Blog</a>
+              </li>
+              <li class="header-nav__item  header-nav__item-active">
+                  <a ui-sref="giveaway" class="header-nav__link">Tractor Giveaway</a>
+              </li>
+          </ul>
+          <ul class="header-nav__list header-nav__list-user" ng-if="!$root.user">
+              <li class="header-nav__item">
+                  <a ui-sref="core.login" class="header-nav__link">Sign in</a>
+              </li>
+              <li class="header-nav__item">
+                  <a ui-sref="core.signup" class="header-nav__link header-nav__cta">Join</a>
+              </li>
+          </ul>
+          <ul class="header-nav__list header-nav__list-app">
+              <li class="header-nav__item">
+                  <a href="https://itunes.apple.com/gb/app/tractor-zoom/id1250303212?mt=8" target="_blank" class="header-nav__link">
+                      <img src="../assets/pages/img/apple.svg" height="40" width="135" />
+                  </a>
+              </li>
+              <li class="header-nav__item">
+                  <a href="https://play.google.com/store/apps/details?id=com.launchdeck.tractorzoom" target="_blank" class="header-nav__link">
+                      <img src="../assets/pages/img/google.svg" height="40" width="135" />
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <ul class="header-nav__list header-nav__list-app-icon">
+          <li class="header-nav__item" ng-if="$root.user">
+              <!-- <a class="header-nav__link">{{$root.user.first_name}} {{$root.user.last_name}}
+                  <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </a> -->
+              <ul class="header-nav__sub-list">
+                  <li class="header-nav__sub-item">
+                      <a class="header-nav__sub-link" ng-click="accessMyAcount()">Settings</a>
+                  </li>
+                  <li class="header-nav__sub-item">
+                      <a class="header-nav__sub-link" ng-click="accessFavorite()">Favorites</a>
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li class="header-nav__sub-item">
+                      <a class="header-nav__sub-link" ng-if="$root.user" ng-click="logout()">Log Out</a>
+                  </li>
+              </ul>
+          </li>
+          <li class="header-nav__item header-nav__item-icon">
+              <a href="https://itunes.apple.com/gb/app/tractor-zoom/id1250303212?mt=8" target="_blank" class="header-nav__link">
+                  <i class="fa fa-apple" aria-hidden="true"></i>
+              </a>
+          </li>
+          <li class="header-nav__item header-nav__item-icon">
+              <a href="https://play.google.com/store/apps/details?id=com.launchdeck.tractorzoom" target="_blank" class="header-nav__link">
+                  <i class="fa fa-android" aria-hidden="true"></i>
+              </a>
+          </li>
+      </ul>
+  </div>
+</div>
